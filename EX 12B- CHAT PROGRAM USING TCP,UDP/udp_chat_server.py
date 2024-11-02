@@ -8,7 +8,6 @@ def udp_chat_server(host='localhost', port=12345):
     while True:
         message, addr = server_socket.recvfrom(1024)
         print(f"Received from {addr}: {message.decode('utf-8')}")
-        # Echo the message back to the sender
         server_socket.sendto(message, addr)
 
 if __name__ == "__main__":
