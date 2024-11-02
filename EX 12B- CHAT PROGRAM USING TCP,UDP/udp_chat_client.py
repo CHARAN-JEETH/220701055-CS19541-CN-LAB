@@ -9,7 +9,6 @@ def udp_chat_client(host='localhost', port=12345):
             break
         client_socket.sendto(message.encode('utf-8'), (host, port))
         
-        # Optionally receive an echo from the server
         response, _ = client_socket.recvfrom(1024)
         print(f"Server: {response.decode('utf-8')}")
 
