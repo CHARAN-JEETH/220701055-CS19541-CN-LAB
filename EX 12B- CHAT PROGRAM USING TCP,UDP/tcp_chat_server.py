@@ -7,7 +7,6 @@ def handle_client(client_socket):
         if not message:
             break
         print(f"Received: {message}")
-        # Echo the message back to the client
         client_socket.sendall(message.encode('utf-8'))
     client_socket.close()
 
