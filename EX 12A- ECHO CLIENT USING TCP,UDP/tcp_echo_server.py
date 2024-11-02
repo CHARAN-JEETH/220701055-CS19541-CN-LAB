@@ -17,6 +17,5 @@ def tcp_echo_server(host='localhost', port=12345):
                     print(f"Received: {data.decode()}")
                     client_socket.sendall(data)
 
-# Run the TCP echo server
 if __name__ == "__main__":
     tcp_echo_server()
