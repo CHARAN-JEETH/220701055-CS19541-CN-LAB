@@ -10,6 +10,5 @@ def udp_echo_server(host='localhost', port=12345):
             print(f"Received: {data.decode()} from {addr}")
             server_socket.sendto(data, addr)
 
-# Run the UDP echo server
 if __name__ == "__main__":
     udp_echo_server()
